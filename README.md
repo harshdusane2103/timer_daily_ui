@@ -15,5 +15,5 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 <p>
-  <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/button.png" heigth="22px",width="35px">
+  <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/button.png"width=22% height=35% align=center>
 </p>
