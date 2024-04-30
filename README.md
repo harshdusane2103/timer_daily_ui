@@ -27,11 +27,13 @@ samples, guidance on mobile development, and a full API reference.
 
 <p> 1>  What is  Asynchronous Programming?</p>
 
-=>  Asynchronous Programming is a Programming paradigam that allows tasks or operations to run independently and concurrently ,without waitting for each other to complete before moving on to the next task.
+=>  Asynchronous Programming is a Programming paradigam that allows tasks or operations to run independently and concurrently ,
+without waitting for each other to complete before moving on to the next task.
 
 <p>2> What is Future Class ?</p>
 
-=>   A Future represents a value that may not be available yet. It encapsulates an asynchronous operation and provides a way to handle the result or error when it becomes available.
+=>    A Future represents a value that may not be available yet. It encapsulates
+an asynchronous operation and provides a way to handle the result or error when it becomes available.
 
 <p>3> What is Duration class & Future.delayed() constructor with Example ?</p>
  Duration class :
@@ -40,7 +42,8 @@ samples, guidance on mobile development, and a full API reference.
 Future.delayed() constructor :
 => The Future.delayed() constructor in Flutter creates a Future object that completes after a specified duration.
 
-Code Example :
+<P>
+  Code Example :
 
 import 'dart:io';
 void main()
@@ -52,6 +55,7 @@ void main()
   );
 
 }
+</P>
 
 <P>4> What is the Use of the async & await keyword?</P>
 =>' async' and 'await 'are keywords used to work with asynchronous code in a more synchronous manner:
@@ -63,7 +67,7 @@ await:
 Used to pause the execution of an async function until a Future completes.
 When encountering await, the function pauses execution until the awaited Future completes, then it resumes execution with the result of that Future.
 
-Code Example :
+<p>Code Example :
 
 
 import 'dart:io';
@@ -82,11 +86,11 @@ async{
   
 
 }
-
+</p>
 <P>5>  What is Recursion ? With Example. </P>
  => Recursion refers  to the technique of a function calling itself .
   
-  Code Exampleimport 'dart:io';
+<p>  Code Exampleimport 'dart:io';
 void main()
 async{
   Future.delayed(
@@ -101,12 +105,12 @@ async{
   );
   
 
-}
+}</p>
 
 <P>6> What is Timer class with example ?</P>
 =>    The Timer class is used to create a delayed or periodic timer. It allows you to execute a function after a specified duration or repeatedly at a specified interval.
 
-code Example :
+<p>code Example :
 
 import 'dart:async';
 import 'dart:io';
@@ -118,12 +122,12 @@ void main()
       print('hello flutter');
     }
   );
-}
+}</p>
 
 <P>7> What is Timer.periodic and use with Example?</P>
 => Timer.periodic is used to create a periodic timer that invokes a callback at a specified interval.
 
-Code Example :
+<P>Code Example :
 import 'dart:async';
 import 'dart:io';
 void main()
@@ -132,7 +136,7 @@ void main()
   { 
     print('Om SaiRam');
    });
-}
+}</P>
 
 
 </p>
