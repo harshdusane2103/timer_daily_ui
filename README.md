@@ -37,7 +37,8 @@ an asynchronous operation and provides a way to handle the result or error when 
 
 <p>3> What is Duration class & Future.delayed() constructor with Example ?</p>
  Duration class :
- => The Duration class represents a span of time, measured in milliseconds. It's commonly used for animations, delays, and timing-related operations within Flutter applications. 
+ => The Duration class represents a span of time, measured in milliseconds. 
+ It's commonly used for animations, delays, and timing-related operations within Flutter applications. 
 
 Future.delayed() constructor :
 => The Future.delayed() constructor in Flutter creates a Future object that completes after a specified duration.
