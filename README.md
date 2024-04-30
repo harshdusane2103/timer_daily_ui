@@ -19,3 +19,14 @@ samples, guidance on mobile development, and a full API reference.
 <p align=center>
   <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/button.png"width=22% height=35% align=center>
 </p>
+
+<h1 align="center">#️⃣5.1 Asynchronous Programming#️⃣</h1>
+<!-- <h3 aling=center></h3>  -->
+<p align=center>
+  
+What is  Asynchronous Programming?
+
+Asynchronous Programming is a Programming paradigam that allows tasks or operations to run independently and concurrently ,without waitting for each other to complete before moving on to the next task.
+
+
+</p>
