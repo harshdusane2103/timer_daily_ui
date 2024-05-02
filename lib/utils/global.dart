@@ -6,7 +6,7 @@ DateTime dateTime=DateTime.now();
 String Day='';
 String Month='';
 
-List <dynamic> imgList=[
+List imgList=[
   {
     'image': 'asstes/images/bg.jpg',
   },
@@ -24,6 +24,6 @@ List <dynamic> imgList=[
   },
 
 ];
-dynamic selectimage='asstes/images/bg.jpg';
+// dynamic selectimage='asstes/images/bg.jpg';
 
 

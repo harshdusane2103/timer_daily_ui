@@ -112,7 +112,7 @@ class _HomepageState extends State<Homepage> {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage(selectimage),
+                  image: AssetImage((imgList[index]['image'])),
                 )),
                 child: Container(
                   margin: EdgeInsets.only(top: 150),
@@ -162,22 +162,23 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
-              // Positioned(
-              //   bottom: 5,
-              //   left:150,
-              //   child: OutlinedButton(
-              //       onPressed: () {
-              //         setState(() {
-              //
-              //             for(int i=0;i<=imgList.length;i++)
-              //               {
-              //                 int index =i;
-              //                 selectimage= imgList[index]['image'];
-              //               }
-              //         });
-              //       },
-              //       child: Text('image')),
-              // ),
+              Positioned(
+                bottom: 5,
+                left:125,
+                child: OutlinedButton(
+                    onPressed: () {
+
+                       if(index==4)
+                         {
+                           index=0;
+                         }
+                       else
+                         {
+                           index++;
+                         }
+                    },
+                    child: Text('ChangeTheme'),),
+              ),
             ]),
           ],
         ),
@@ -185,4 +186,4 @@ class _HomepageState extends State<Homepage> {
     ));
   }
 }
-
+int index =0;
