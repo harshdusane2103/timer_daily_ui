@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:timer_daily_ui/utils/global.dart';
 
@@ -29,12 +31,21 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-
-
   @override
   Widget build(BuildContext context) {
+   //  Timer(Duration(minutes:2), () {
+   // setState(() {
+   //   if (index == 4) {
+   //     index = 0;
+   //   } else {
+   //     index++;
+   //   }
+   // });
+   //  });
     Timer.periodic(Duration(seconds: 1), (timer) {
+
       setState(() {
+
         switch (dateTime.weekday) {
           case 1:
             Day = 'Monday';
@@ -127,7 +138,7 @@ class _HomepageState extends State<Homepage> {
                         children: [
                           Text(
                             '${(dateTime.hour > 12) ? ((dateTime.hour % 12) > 9) ? dateTime.hour % 12 : ('0${dateTime.hour % 12}') : dateTime.hour}:'
-                            '${(dateTime.minute > 9) ? dateTime.minute : ('0${dateTime.minute}')}',
+                            '${(dateTime.minute > 9) ? dateTime.minute : ('0${dateTime.minute}')}:${(dateTime.second)}',
                             style: const TextStyle(
                                 fontSize: 48,
                                 fontWeight: FontWeight.bold,
@@ -158,26 +169,82 @@ class _HomepageState extends State<Homepage> {
                           )
                         ],
                       ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          margin: EdgeInsets.only(left: 25, top: 50),
+                          height: 200,
+                          width: 200,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border:
+                                  Border.all(color: Colors.white, width: 5)),
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Container(
+                                height: 10,
+                                width: 10,
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                              ...List.generate(
+                                  60,
+                                  (index) => Transform.rotate(
+                                        angle: ((index+1) * 6 * pi)/180,
+                                        child: ((index + 1) % 5 ==0)
+                                            ?  VerticalDivider(
+                                                thickness: 3,
+                                                color: Colors.red,
+                                                endIndent: 170,
+                                              )
+                                            : VerticalDivider(
+                                                thickness: 1,
+                                                color: Colors.white,
+                                              
+                                                endIndent:180,
+                                              ),
+                                      )),
+                              Transform.rotate(
+                                angle:
+                                    (dateTime.hour + (dateTime.minute / 60)) *
+                                        30 *
+                                        pi /
+                                        180,
+                                child: VerticalDivider(
+                                  thickness: 4,
+                                  color: Colors.white,
+                                  indent: 45,
+                                  endIndent: 100,
+                                ),
+                              ),
+                              Transform.rotate(
+                                angle: (dateTime.minute * 6 * pi) / 180,
+                                child: VerticalDivider(
+                                  thickness: 3,
+                                  color: Colors.white,
+                                  indent: 32,
+                                  endIndent: 100,
+                                ),
+                              ),
+                              Transform.rotate(
+                                angle: (dateTime.second * 6 * pi) / 180,
+                                child: VerticalDivider(
+                                  thickness: 2,
+                                  color: Colors.white,
+                                  indent: 23,
+                                  endIndent: 100,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
-              ),
-              Positioned(
-                bottom: 5,
-                left:125,
-                child: OutlinedButton(
-                    onPressed: () {
-
-                       if(index==4)
-                         {
-                           index=0;
-                         }
-                       else
-                         {
-                           index++;
-                         }
-                    },
-                    child: Text('ChangeTheme'),),
               ),
             ]),
           ],
@@ -186,4 +253,5 @@ class _HomepageState extends State<Homepage> {
     ));
   }
 }
-int index =0;
+
+int index = 0;
