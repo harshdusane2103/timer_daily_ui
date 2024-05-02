@@ -144,7 +144,7 @@ void main()
 ```
 
 <h1 align="center">#️⃣5.3 Digital Clock App#️⃣</h1>
-<p>  <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/deg.png"width=22% height=35% align=center></p>
+<p>  <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/degital.png"width=22% height=35% align=center></p>
 
 
 
