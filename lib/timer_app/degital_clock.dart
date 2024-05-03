@@ -15,6 +15,9 @@ class degitalScreen extends StatefulWidget {
 class _degitalScreenState extends State<degitalScreen> {
   @override
   Widget build(BuildContext context) {
+    double h=MediaQuery.of(context).size.height;
+    double w=MediaQuery.of(context).size.width;
+
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         switch (dateTime.weekday) {
@@ -89,81 +92,93 @@ class _degitalScreenState extends State<degitalScreen> {
                 onTap:() {
                   Navigator.of(context).pop('/');
                 },child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+
+
+            title: Text('     Degital Clock',style: TextStyle(color: Colors.white,fontStyle:FontStyle.italic,fontSize: 32),),
+
+
           ),
           body: Center(
-        child: Column(
-          children: [
-            Stack(children: [
-              Container(
-                margin: EdgeInsets.only(top: 130),
-                height: 360,
-                width: 360,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-
-                  border:Border.all(color: Colors.white,width: 4)
-
-                   ),
-                alignment: Alignment.center,
-                child: Container(
-                  margin: EdgeInsets.only(top:80),
-                  height: 200,
-                  width: 250,
-                  // color: Colors.black12,
-                  // ${dateTime.day}/${dateTime.month}/${dateTime.year}
-                  child: Column(children: [
-                    Text(
-                      '$Day',
-                      style: TextStyle(color: Colors.orange, fontWeight:FontWeight.bold,fontSize: 24),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+        child: SingleChildScrollView(
+          child: Container(
+            height: h,
+            width: w,
+            child: Column(
+              children: [
+                SizedBox(height: 130,),
+                Stack(children: [
+                  Container(
+          
+                    height: 360,
+                    width: 360,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+          
+                      border:Border.all(color: Colors.white,width: 4)
+          
+                       ),
+                    alignment: Alignment.center,
+                    child: Container(
+                      margin: EdgeInsets.only(top:80),
+                      height: 200,
+                      width: 250,
+                      // color: Colors.black12,
+                      // ${dateTime.day}/${dateTime.month}/${dateTime.year}
+                      child: Column(children: [
                         Text(
-                          '${(dateTime.hour > 12) ? ((dateTime.hour % 12) > 9) ? dateTime.hour % 12 : ('0${dateTime.hour % 12}') : dateTime.hour}:'
-                          '${(dateTime.minute > 9) ? dateTime.minute : ('0${dateTime.minute}')}:${(dateTime.second)}',
-                          style: const TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                          '$Day',
+                          style: TextStyle(color: Colors.orange, fontWeight:FontWeight.bold,fontSize: 24),
                         ),
-                        SizedBox(
-                          width: 5,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '${(dateTime.hour > 12) ? ((dateTime.hour % 12) > 9) ? dateTime.hour % 12 : ('0${dateTime.hour % 12}') : dateTime.hour}:'
+                              '${(dateTime.minute > 9) ? dateTime.minute : ('0${dateTime.minute}')}:${(dateTime.second)}',
+                              style: const TextStyle(
+                                  fontSize: 48,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              '${(dateTime.hour >= 12) ? 'PM' : 'AM'}',
+                              style: TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                          ],
                         ),
-                        Text(
-                          '${(dateTime.hour >= 12) ? 'PM' : 'AM'}',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+          
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text(
+                              '${dateTime.day} ${Month}',
+                              style: TextStyle(fontSize: 18, color: Colors.green),
+                            )
+                          ],
                         ),
-                      ],
+                      ]),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-
-                        SizedBox(
-                          width: 4,
-                        ),
-                        Text(
-                          '${dateTime.day} ${Month}',
-                          style: TextStyle(fontSize: 18, color: Colors.green),
-                        )
-                      ],
-                    ),
-                  ]),
+                  ),
+          
+                ]
                 ),
-              ),
-
-            ]
+                SizedBox(height:180,),
+                Positioned(
+                  bottom: 1,
+                  child: OutlinedButton(onPressed: () {
+                    Navigator.of(context).pushNamed('/aena');
+          
+                  }, child:Text('Next',style:TextStyle(color: Colors.teal),)),
+                )
+              ],
             ),
-            SizedBox(height:180,),
-            Positioned(
-              bottom: 1,
-              child: OutlinedButton(onPressed: () {
-                Navigator.of(context).pushNamed('/aena');
-
-              }, child:Text('Next',style:TextStyle(color: Colors.teal),)),
-            )
-          ],
+          ),
         ),
       )),
     );

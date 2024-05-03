@@ -1,27 +1,32 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
+import 'package:timer_daily_ui/utils/global.dart';
 
-import '../utils/global.dart';
+class watch extends StatelessWidget {
+  const watch({super.key});
 
-class strapScreen extends StatefulWidget {
-  const strapScreen({super.key});
-
-  @override
-  State<strapScreen> createState() => _strapScreenState();
-}
-
-class _strapScreenState extends State<strapScreen> {
   @override
   Widget build(BuildContext context) {
-    double h=MediaQuery.of(context).size.height;
-    double w=MediaQuery.of(context).size.width;
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: strapwatch(),
+    );
+  }
+}
+
+class strapwatch extends StatefulWidget {
+  const strapwatch({super.key});
+
+  @override
+  State<strapwatch> createState() => _strapwatchState();
+}
+
+class _strapwatchState extends State<strapwatch> {
+  @override
+  Widget build(BuildContext context) {
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
-
         switch (dateTime.weekday) {
           case 1:
             Day = 'Monday';
@@ -85,64 +90,57 @@ class _strapScreenState extends State<strapScreen> {
         dateTime = DateTime.now();
       });
     });
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          SizedBox(height: 150,),
 
-        title: Text('               Strap Clock',style: TextStyle(color: Colors.white,fontStyle:FontStyle.italic,fontSize: 32),),
-      ),
-      body: Container(
-        height: h,
-        width: w,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 130,
-              ),
-              Align(
-                alignment: Alignment.center,
-                child: Stack(children: [
+          Align(
+            alignment: Alignment.center,
+            child: Stack(
+                children:[
                   SizedBox(
                     height: 360,
                     width: 360,
                     child: CircularProgressIndicator(
-                      strokeWidth: 10,
+                      strokeWidth:15,
                       color: Colors.orange,
-                      value: (dateTime.hour % 12 + (dateTime.minute / 60)) / 12,
+                      value:dateTime.hour/24 ,
                     ),
                   ),
                   SizedBox(
                     height: 354,
                     width: 354,
                     child: CircularProgressIndicator(
-                      strokeWidth: 10,
+                      strokeWidth:10,
                       color: Colors.white,
-                      value: dateTime.minute / 60,
+                      value:dateTime.minute/60 ,
                     ),
                   ),
+
                   SizedBox(
                     height: 350,
                     width: 350,
                     child: CircularProgressIndicator(
                       strokeWidth: 6,
                       color: Colors.green,
-                      value: dateTime.second / 60,
+                      value:dateTime.second/60 ,
                     ),
                   ),
                   Container(
+
                     height: 360,
                     width: 360,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-          
+
                       // border:Border.all(color: Colors.white,width: 4)
+
                     ),
                     alignment: Alignment.center,
                     child: Container(
-                      margin: EdgeInsets.only(top: 80),
+                      margin: EdgeInsets.only(top:80),
                       height: 200,
                       width: 250,
                       // color: Colors.black12,
@@ -150,10 +148,7 @@ class _strapScreenState extends State<strapScreen> {
                       child: Column(children: [
                         Text(
                           '$Day',
-                          style: TextStyle(
-                              color: Colors.orange,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24),
+                          style: TextStyle(color: Colors.orange, fontWeight:FontWeight.bold,fontSize: 24),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -178,6 +173,7 @@ class _strapScreenState extends State<strapScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+
                             SizedBox(
                               width: 4,
                             ),
@@ -190,23 +186,19 @@ class _strapScreenState extends State<strapScreen> {
                       ]),
                     ),
                   ),
-                ]),
-              ),
-              SizedBox(
-                height:160,
-              ),
-              OutlinedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/de');
-                  },
-                  child: Text(
-                    'Next',
-                    style: TextStyle(color: Colors.teal),
-                  )),
-            ],
+
+                ]
+            ),
           ),
-        ),
+          SizedBox(height: 200,),
+          OutlinedButton(onPressed: () {
+            Navigator.of(context).pushNamed('/de');
+
+          }, child:Text('Next',style:TextStyle(color: Colors.teal),)),
+
+        ],
       ),
-    ));
+
+    );
   }
 }
