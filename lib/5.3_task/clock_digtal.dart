@@ -33,17 +33,21 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-   //  Timer(Duration(minutes:2), () {
-   // setState(() {
-   //   if (index == 4) {
-   //     index = 0;
-   //   } else {
-   //     index++;
-   //   }
-   // });
-   //  });
-    Timer.periodic(Duration(seconds: 1), (timer) {
 
+    // Future.delayed(Duration(seconds: 2),
+    // () {
+    // Timer.periodic(Duration(seconds: 30), (timer) {
+    // if (index == 4) {
+    //     index=0;
+    //   }
+    //   else {
+    //     index ++;
+    //   }
+    // });
+
+    // );
+
+    Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
 
         switch (dateTime.weekday) {
@@ -123,7 +127,7 @@ class _HomepageState extends State<Homepage> {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage((imgList[index]['image'])),
+                  image: AssetImage('asstes/images/bg4.jpg'),
                 )),
                 child: Container(
                   margin: EdgeInsets.only(top: 150),
@@ -203,16 +207,13 @@ class _HomepageState extends State<Homepage> {
                                             : VerticalDivider(
                                                 thickness: 1,
                                                 color: Colors.white,
-                                              
+
                                                 endIndent:180,
                                               ),
                                       )),
                               Transform.rotate(
                                 angle:
-                                    (dateTime.hour + (dateTime.minute / 60)) *
-                                        30 *
-                                        pi /
-                                        180,
+                                    (dateTime.hour + (dateTime.minute / 60)) * 30 * pi / 180,
                                 child: VerticalDivider(
                                   thickness: 4,
                                   color: Colors.white,

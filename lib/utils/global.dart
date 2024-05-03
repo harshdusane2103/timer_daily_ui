@@ -8,19 +8,19 @@ String Month='';
 
 List imgList=[
   {
-    'image': 'asstes/images/bg.jpg',
+    'image': AssetImage('asstes/images/bg.jpg'),
   },
   {
-    'image': 'asstes/images/bg2.jpg',
+    'image': AssetImage('asstes/images/bg2.jpg'),
   },
   {
-    'image': 'asstes/images/bg3.jpg',
+    'image': AssetImage('asstes/images/bg3.jpg'),
   },
   {
-    'image': 'asstes/images/bg4.jpg',
+    'image': AssetImage('asstes/images/bg4.jpg'),
   },
   {
-    'image': 'asstes/images/bg5.jpg',
+    'image': AssetImage('asstes/images/bg5.jpg'),
   },
 
 ];
