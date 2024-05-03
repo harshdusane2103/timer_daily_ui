@@ -156,10 +156,14 @@ void main()
 
 <h1 align="center">#️⃣Timer App #️⃣</h1>
 
-<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page1.png"width=22% height=35% align=center></p>
-<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page2.png"width=22% height=35% align=center></p>
-<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page3.png"width=22% height=35% align=center></p>
-<p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/400c2b81-1774-4c2a-b875-23858d2f4c88"width=22% height=35% align=center></p>
+<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page1.png"width=22% height=35% align=center>
+ <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page2.png"width=22% height=35% align=center>
+ <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/page3.png"width=22% height=35% align=center></p>
+<p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/9958e796-6737-4550-9637-705bae0fe211"width=22% height=35% align=center></p>
+
+
+
+
 
 
 
