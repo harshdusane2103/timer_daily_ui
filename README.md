@@ -144,13 +144,15 @@ void main()
 ```
 
 <h1 align="center">#️⃣5.3 Digital Clock App#️⃣</h1>
-<p>  <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/de.png"width=22% height=35% align=center></p>
+<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/de.png"width=22% height=35% align=center></p>
 <p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/bc5c25a9-4857-440a-803a-9816da47dafb"></p>
 
 
 
+<h1 align="center">#️⃣5.4  Analogue Clock #️⃣</h1>
 
-
+<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/de.png"width=22% height=35% align=center></p>
+<p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/bc5c25a9-4857-440a-803a-9816da47dafb"></p>
 
 
 
