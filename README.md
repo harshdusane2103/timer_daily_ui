@@ -151,8 +151,11 @@ void main()
 
 <h1 align="center">#️⃣5.4  Analogue Clock #️⃣</h1>
 
-<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/de.png"width=22% height=35% align=center></p>
-<p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/bc5c25a9-4857-440a-803a-9816da47dafb"></p>
+<p> <img src="https://github.com/harshdusane2103/timer_daily_ui/blob/master/analog.png"width=22% height=35% align=center></p>
+<p><video src="https://github.com/harshdusane2103/timer_daily_ui/assets/161817658/400c2b81-1774-4c2a-b875-23858d2f4c88"></p>
+
+
+
 
 
 
