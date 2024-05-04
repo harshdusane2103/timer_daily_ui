@@ -20,6 +20,10 @@ class _homepageState extends State<homepage> {
       ),
       body: Column(
         children: [
+          LinearProgressIndicator(
+            color: Colors.blue,
+            value: 0.5,
+          ),
           Center(
               child: Text(
             'Common Button',

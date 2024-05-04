@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'homepage.dart';
+import 'line.dart';
 void main(){
   runApp(const MyApp());
 }
@@ -11,7 +12,7 @@ void main(){
       Widget build(BuildContext context) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home:homepage(),
+          home:LineScreen(),
         );
       }
     }

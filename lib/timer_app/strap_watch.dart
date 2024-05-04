@@ -91,7 +91,7 @@ class _strapScreenState extends State<strapScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
 
-        title: Text('               Strap Clock',style: TextStyle(color: Colors.white,fontStyle:FontStyle.italic,fontSize: 32),),
+        title: Text('      Strap Clock',style: TextStyle(color: Colors.white,fontStyle:FontStyle.italic,fontSize: 32),),
       ),
       body: Container(
         height: h,
